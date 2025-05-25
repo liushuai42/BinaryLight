@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="org.jupnp.example.binarylight.MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_browser"
+            app:destination="@id/nav_browser" />
+
+        <action
+            android:id="@+id/action_light"
+            app:destination="@id/fragment_light" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/nav_browser"
+        app:startDestination="@id/fragment_browser">
+        <fragment
+            android:id="@+id/fragment_browser"
+            android:name="org.jupnp.example.binarylight.client.BrowserFragment"
+            tools:layout="@layout/fragment_browser">
+            <action
+                android:id="@+id/action_switch_power_control"
+                app:destination="@id/fragment_switch_power_control" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/fragment_switch_power_control"
+            android:name="org.jupnp.example.binarylight.client.SwitchPowerControlFragment"
+            tools:layout="@layout/fragment_switch_power_control" />
+    </navigation>
+
+    <fragment
+        android:id="@+id/fragment_light"
+        android:name="org.jupnp.example.binarylight.server.LightFragment"
+        tools:layout="@layout/fragment_light" />
+
+</navigation>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BinaryLight</string>
+
+    <string name="registering_device">Registering device</string>
+    <string name="create_device_failed">Create device failed</string>
+
+    <string name="function_browser">Browser</string>
+    <string name="function_light">Light</string>
+    <string name="no_device">No device</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
